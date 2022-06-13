@@ -21,11 +21,11 @@
             var input = document.getElementById("input").value;
             var output = input.replace(/(\r\n|\n|\r)/gm, "");
             output = output.replace(/\s\s+/g, ' ');
-            document.getElementById("output").innerHTML = output
+            document.getElementById("output").value = output
         }
         function resetFunction(){
-            document.getElementById("output").innerHTML = "";
-            document.getElementById("input").innerHTML = "";
+            document.getElementById("output").value = "";
+            document.getElementById("input").value = "";
         }
     </script>
 </html>
