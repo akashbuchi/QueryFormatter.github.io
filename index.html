@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sql Line convertor</title>
+        <style>
+            p {
+              background-image: url('https://drive.google.com/file/d/1GwDhyAQH5nWX2GGCauHOcfslPXdhTRec/view?usp=sharing');
+            }
+            </style>
+    </head>
+
+    <body>
+        <textarea name="" id ="input" cols="20" rows="10"></textarea>
+        <textarea name="" id ="output" cols="20" rows="10"></textarea>
+        <button onclick =" myFunction() ">Convert</button>
+
+    </body>
+    <script>
+        function myFunction(){
+            var input = document.getElementById("input").value;
+            //Convert the input by replacing breaklines and space with 
+            var output = input.replace(/(\r\n|\n|\r)/gm, "");
+            output = output.replace(/\s\s+/g, ' ');
+            document.getElementById("output").innerHTML = output
+        }
+    </script>
+
+</html>
+
