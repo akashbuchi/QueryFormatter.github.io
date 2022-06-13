@@ -1,31 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <style>
-        body {
-          background-image: url('TE.jpeg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: 100% 100%;
-        }
-        </style>
-    <body>
-        <textarea name="" id="input" cols="30" rows="10"></textarea>
-        <textarea name="" id="output" cols="30" rows="10"></textarea>
-        <button onclick="myFunction()">Convert</button>
-        <button onclick="resetFunction()">Reset</button>
-    </body>
 
-    <script>
-        function myFunction(){
-            var input = document.getElementById("input").value;
-            var output = input.replace(/(\r\n|\n|\r)/gm, "");
-            output = output.replace(/\s\s+/g, ' ');
-            document.getElementById("output").value = output
-        }
-        function resetFunction(){
-            document.getElementById("output").value = "";
-            document.getElementById("input").value = "";
-        }
-    </script>
+<head></head>
+<style>
+    body {
+        background-image: url('TE.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+    #input {
+        height: 200px;
+        width: 500px;
+    }
+
+    #output {
+        height: 200px;
+        width: 500px;
+    }
+    textarea{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 25px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+
+
+<body>
+    <h3> Query Formatter</h3>
+    <textarea name="" id="input" cols="30" rows="10"></textarea>
+    <textarea name="" id="output" cols="30" rows="10"></textarea>
+    <br>
+    <button onclick="myFunction()">Convert</button>
+    <button onclick="resetFunction()">Reset</button>
+</body>
+
+<script>
+    function myFunction() {
+        var input = document.getElementById("input").value;
+        var output = input.replace(/(\r\n|\n|\r)/gm, "");
+        output = output.replace(/\s\s+/g, ' ');
+        document.getElementById("output").value = output
+    }
+    function resetFunction() {
+        document.getElementById("output").value = "";
+        document.getElementById("input").value = "";
+    }
+</script>
+
 </html>
