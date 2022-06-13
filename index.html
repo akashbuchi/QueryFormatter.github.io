@@ -17,8 +17,7 @@
     </body>
     <script>
         function myFunction(){
-            var input = document.getElementById("input").value;
-            //Convert the input by replacing breaklines and space with 
+            var input = document.getElementById("input").value; 
             var output = input.replace(/(\r\n|\n|\r)/gm, "");
             output = output.replace(/\s\s+/g, ' ');
             document.getElementById("output").innerHTML = output
