@@ -51,7 +51,8 @@
 <script>
     function myFunction() {
         var input = document.getElementById("input").value;
-        var output = input.replace(/(\r\n|\n|\r)/gm, "");
+        // var output = input.replace(/(\r\n|\n|\r)/gm, "");
+        var output = input.replace(/[\r\n]+/g," ")
         output = output.replace(/\s\s+/g, ' ');
         document.getElementById("output").value = output
     }
